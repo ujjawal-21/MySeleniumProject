@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-10-02T22:08:19 IST" name="Suite" finished-at="2026-10-02T22:09:46 IST" duration-ms="86493">
+    <groups>
+    </groups>
+    <test started-at="2026-10-02T22:08:19 IST" name="Test" finished-at="2026-10-02T22:09:46 IST" duration-ms="86493">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:tests.LoginTest@3300f4fd]" started-at="2026-10-02T22:09:07 IST" name="initialize" finished-at="2026-10-02T22:09:23 IST" duration-ms="16047" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="loginSuccessTest()[pri:1, instance:tests.LoginTest@3300f4fd]" started-at="2026-10-02T22:09:23 IST" name="loginSuccessTest" finished-at="2026-10-02T22:09:29 IST" duration-ms="6187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSuccessTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@3300f4fd]" started-at="2026-10-02T22:09:29 IST" name="tearDown" finished-at="2026-10-02T22:09:30 IST" duration-ms="1074" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:tests.LoginTest@3300f4fd]" started-at="2026-10-02T22:09:30 IST" name="initialize" finished-at="2026-10-02T22:09:42 IST" duration-ms="12153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="loginFailureTest()[pri:2, instance:tests.LoginTest@3300f4fd]" started-at="2026-10-02T22:09:42 IST" name="loginFailureTest" finished-at="2026-10-02T22:09:45 IST" duration-ms="2491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailureTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@3300f4fd]" started-at="2026-10-02T22:09:45 IST" name="tearDown" finished-at="2026-10-02T22:09:46 IST" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.AddToCartTest">
+        <test-method is-config="true" signature="prequisites()[pri:0, instance:tests.AddToCartTest@5c08c46a]" started-at="2026-10-02T22:08:19 IST" name="prequisites" finished-at="2026-10-02T22:08:47 IST" duration-ms="27552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prequisites -->
+        <test-method signature="addProductToCartTest()[pri:0, instance:tests.AddToCartTest@5c08c46a]" started-at="2026-10-02T22:08:47 IST" name="addProductToCartTest" finished-at="2026-10-02T22:08:49 IST" duration-ms="2435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductToCartTest -->
+        <test-method signature="checkCartTest()[pri:0, instance:tests.AddToCartTest@5c08c46a]" started-at="2026-10-02T22:08:49 IST" name="checkCartTest" finished-at="2026-10-02T22:08:55 IST" duration-ms="5505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AddToCartTest@5c08c46a]" started-at="2026-10-02T22:08:55 IST" name="tearDown" finished-at="2026-10-02T22:09:04 IST" duration-ms="8661" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.AddToCartTest -->
+      <class name="tests.ProductDetailTest">
+        <test-method is-config="true" signature="preRequisites()[pri:0, instance:tests.ProductDetailTest@5cbe877d]" started-at="2026-10-02T22:09:04 IST" name="preRequisites" finished-at="2026-10-02T22:09:25 IST" duration-ms="21750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preRequisites -->
+        <test-method signature="productdetailPageNavigationTest()[pri:0, instance:tests.ProductDetailTest@5cbe877d]" started-at="2026-10-02T22:09:25 IST" name="productdetailPageNavigationTest" finished-at="2026-10-02T22:09:38 IST" duration-ms="12872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productdetailPageNavigationTest -->
+        <test-method signature="pdp_attributeTest()[pri:1, instance:tests.ProductDetailTest@5cbe877d]" started-at="2026-10-02T22:09:38 IST" name="pdp_attributeTest" finished-at="2026-10-02T22:09:39 IST" duration-ms="638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pdp_attributeTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ProductDetailTest@5cbe877d]" started-at="2026-10-02T22:09:39 IST" name="tearDown" finished-at="2026-10-02T22:09:43 IST" duration-ms="3920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ProductDetailTest -->
+      <class name="tests.OrderPlacementTest">
+        <test-method is-config="true" signature="preRequisites()[pri:0, instance:tests.OrderPlacementTest@4cf8b2dc]" started-at="2026-10-02T22:08:21 IST" name="preRequisites" finished-at="2026-10-02T22:08:55 IST" duration-ms="33571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preRequisites -->
+        <test-method signature="placeOrderTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.OrderPlacementTest@4cf8b2dc]" started-at="2026-10-02T22:08:55 IST" name="placeOrderTest" data-provider="testData" finished-at="2026-10-02T22:09:01 IST" duration-ms="6385" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rahul]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Patna]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrderTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.OrderPlacementTest@4cf8b2dc]" started-at="2026-10-02T22:09:01 IST" name="tearDown" finished-at="2026-10-02T22:09:07 IST" duration-ms="5747" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.OrderPlacementTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
