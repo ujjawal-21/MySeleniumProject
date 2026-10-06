@@ -126,7 +126,7 @@ public class ExtentReportListener extends Base implements ITestListener{
 	}
 	
 	public String getScreenshot(String testcaseName) throws IOException {
-		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); //Chromedriver implements TakesScreenshot interface
+		File scrFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE); //Chromedriver implements TakesScreenshot interface
 		String currentDir = System.getProperty("user.dir");
 		String destPath = currentDir +"/screenshots/"+testcaseName+".png";
 		FileUtils.copyFile(scrFile, new File(destPath));
