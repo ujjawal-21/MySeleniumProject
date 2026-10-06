@@ -90,5 +90,6 @@ public class AddToCartTest extends Base{
 	public void tearDown() {
 		getDriver().quit();
 	}
+	
 
 }

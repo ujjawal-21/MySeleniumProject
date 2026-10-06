@@ -4,6 +4,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.UnhandledAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -36,11 +37,10 @@ public class LoginTest extends Base{
 	public void loginSuccessTest() throws Exception {
 			logger.info("*********LoginSuccessTest Initiated**********");
 			try{
-				if(lp.getLoginHeader().equals("Log in")){
-					
+					Assert.assertEquals(lp.getLoginHeader(), "Log in");					
 					
 					logger.info("*********Injecting valid username**********");
-					lp.enterUsername("admin");
+					lp.enterUsername("admin123");
 					
 					
 					logger.info("*********Injecting valid password**********");
@@ -49,20 +49,15 @@ public class LoginTest extends Base{
 					logger.info("*********Trying to login**********");
 					lp.clickOnLogin();
 					
+					Assert.assertEquals(hp.getLoggedInUser(),"Welcome admin");
 				
-					if(hp.getLoggedInUser().equals("Welcome admin")){
-						System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName()+" PASSED");
-					}
-					else {
-						throw new Exception("Expected Welcome admin BUT Found "+hp.getLoggedInUser());
-					}
-				}
 			}
 			catch(NoSuchElementException elementNotFound) {
 				String exceptionName = elementNotFound.getClass().getSimpleName();
 				String errorMsg = elementNotFound.getMessage().split("\\r?\\n")[0];
 				
 				logger.error("loginSuccessTest FAILED: {} FOUND => {}", exceptionName, errorMsg);
+				Assert.fail();
 			}
 			catch(UnhandledAlertException uae) {
 				String exceptionName = uae.getClass().getSimpleName();
@@ -70,12 +65,14 @@ public class LoginTest extends Base{
 				ut.checkAlertVisibility(getDriver());
 				
 				logger.error("loginSuccessTest FAILED: {} FOUND => {}", exceptionName, errorMsg);
+				Assert.fail();
 			}
 			catch(Exception ex) {
 				String exceptionName = ex.getClass().getSimpleName();
 				String errorMsg = ex.getMessage().split("\\r?\\n")[0];
 				
 				logger.error("loginSuccessTest FAILED: {} FOUND => {}", exceptionName, errorMsg);
+				Assert.fail();
 			}
 	}
 	
@@ -85,7 +82,9 @@ public class LoginTest extends Base{
 		//Thread.sleep(3000);
 		logger.info("*********LoginFailureTest Initiated**********");
 		
-		if(lp.getLoginHeader().equals("Log in")){
+		try{
+			Assert.assertEquals(lp.getLoginHeader(), "Log in");		
+			
 			logger.info("*********Injecting invalid username**********");
 			lp.enterUsername("admin123");
 			
@@ -97,15 +96,21 @@ public class LoginTest extends Base{
 			
 			logger.info("*********Error Msg Appeared**********");
 			String errorMsg = ut.checkAlertVisibility(getDriver());
-			if(errorMsg.equals("Wrong password.")){
-				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName()+" PASSED");
-			}
-			else {
-				throw new Exception("Expected Wrong password. but found "+errorMsg);
-			}
+			Assert.assertEquals(errorMsg, "Wrong password.");		
 		}
-		else {
-			throw new Exception("Expected Login but Found "+lp.getLoginHeader());
+		catch(NoSuchElementException elementNotFound) {
+			String exceptionName = elementNotFound.getClass().getSimpleName();
+			String errorMsg = elementNotFound.getMessage().split("\\r?\\n")[0];
+			
+			logger.error("loginFailureTest FAILED: {} FOUND => {}", exceptionName, errorMsg);
+			Assert.fail();
+		}
+		catch(Exception ex) {
+			String exceptionName = ex.getClass().getSimpleName();
+			String errorMsg = ex.getMessage().split("\\r?\\n")[0];
+			
+			logger.error("loginFailureTest FAILED: {} FOUND => {}", exceptionName, errorMsg);
+			Assert.fail();
 		}
 	}
 	

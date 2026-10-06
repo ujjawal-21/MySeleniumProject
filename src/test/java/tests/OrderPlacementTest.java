@@ -99,9 +99,9 @@ public class OrderPlacementTest extends Base {
 		}
 	}
 	
+
 	@AfterMethod
 	public void tearDown() {
 		getDriver().quit();
 	}
-
 }

@@ -100,6 +100,7 @@ public class ExtentReportListener extends Base implements ITestListener{
 					.println("Exception thrown while updating test fail status " + Arrays.toString(e.getStackTrace()));
 		}
 		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
+	
 	}
 	
 
@@ -113,6 +114,7 @@ public class ExtentReportListener extends Base implements ITestListener{
 					.println("Exception thrown while updating test skip status " + Arrays.toString(e.getStackTrace()));
 		}
 		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
+	
 	}
 
 	public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult result) {

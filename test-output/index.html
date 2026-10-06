@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginSuccessTest">loginSuccessTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,11 +128,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginFailureTest">loginFailureTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginSuccessTest">loginSuccessTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -148,44 +157,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.ProductDetailTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="pdp_attributeTest">
-                  </a> <!-- pdp_attributeTest -->
-                  <span class="method-name">pdp_attributeTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="productdetailPageNavigationTest">
-                  </a> <!-- productdetailPageNavigationTest -->
-                  <span class="method-name">productdetailPageNavigationTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.OrderPlacementTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="placeOrderTest(Rahul, India, Patna, 1234567890, May, 2026)">
-                  </a> <!-- placeOrderTest(Rahul, India, Patna, 1234567890, May, 2026) -->
-                  <span class="method-name">placeOrderTest</span>
-                  <span class="parameters">(Rahul,India,Patna,1234567890,May,2026)</span>
+                  <a name="loginSuccessTest">
+                  </a> <!-- loginSuccessTest -->
+                  <span class="method-name">loginSuccessTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at tests.LoginTest.loginSuccessTest(LoginTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -211,6 +202,28 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">tests.ProductDetailTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="pdp_attributeTest">
+                  </a> <!-- pdp_attributeTest -->
+                  <span class="method-name">pdp_attributeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productdetailPageNavigationTest">
+                  </a> <!-- productdetailPageNavigationTest -->
+                  <span class="method-name">productdetailPageNavigationTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -221,11 +234,20 @@
                   <span class="method-name">loginFailureTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.OrderPlacementTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginSuccessTest">
-                  </a> <!-- loginSuccessTest -->
-                  <span class="method-name">loginSuccessTest</span>
+                  <a name="placeOrderTest(Rahul, India, Patna, 1234567890, May, 2026)">
+                  </a> <!-- placeOrderTest(Rahul, India, Patna, 1234567890, May, 2026) -->
+                  <span class="method-name">placeOrderTest</span>
+                  <span class="parameters">(Rahul,India,Patna,1234567890,May,2026)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -240,7 +262,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;classes&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.LoginTest&quot;/&gt;
       &lt;class name=&quot;tests.ProductDetailTest&quot;/&gt;
@@ -289,36 +311,36 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'productdetailPageNavigationTest')
 data.setCell(0, 2, 'tests.ProductDetailTest')
-data.setCell(0, 3, 12872);
+data.setCell(0, 3, 8529);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'placeOrderTest')
-data.setCell(1, 2, 'tests.OrderPlacementTest')
-data.setCell(1, 3, 6385);
+data.setCell(1, 1, 'checkCartTest')
+data.setCell(1, 2, 'tests.AddToCartTest')
+data.setCell(1, 3, 3727);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginSuccessTest')
 data.setCell(2, 2, 'tests.LoginTest')
-data.setCell(2, 3, 6187);
+data.setCell(2, 3, 2817);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'checkCartTest')
-data.setCell(3, 2, 'tests.AddToCartTest')
-data.setCell(3, 3, 5505);
+data.setCell(3, 1, 'loginFailureTest')
+data.setCell(3, 2, 'tests.LoginTest')
+data.setCell(3, 3, 2668);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'loginFailureTest')
-data.setCell(4, 2, 'tests.LoginTest')
-data.setCell(4, 3, 2491);
+data.setCell(4, 1, 'addProductToCartTest')
+data.setCell(4, 2, 'tests.AddToCartTest')
+data.setCell(4, 3, 2295);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'addProductToCartTest')
-data.setCell(5, 2, 'tests.AddToCartTest')
-data.setCell(5, 3, 2435);
+data.setCell(5, 1, 'placeOrderTest')
+data.setCell(5, 2, 'tests.OrderPlacementTest')
+data.setCell(5, 3, 1771);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'pdp_attributeTest')
 data.setCell(6, 2, 'tests.ProductDetailTest')
-data.setCell(6, 3, 638);
+data.setCell(6, 3, 245);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -344,107 +366,85 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginSuccessTest</span>
+                <span class="method-start">10219 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">13190 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize</span>
+                <span class="method-start">13667 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginFailureTest</span>
+                <span class="method-start">21929 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">24603 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ProductDetailTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">preRequisites</span>
+                <span class="method-start">25038 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">productdetailPageNavigationTest</span>
+                <span class="method-start">33880 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pdp_attributeTest</span>
+                <span class="method-start">42413 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">42661 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">tests.AddToCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">prequisites</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">43116 ms</span>
               </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.OrderPlacementTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">preRequisites</span>
-                <span class="method-start">1890 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.AddToCartTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">addProductToCartTest</span>
-                <span class="method-start">27556 ms</span>
+                <span class="method-start">56208 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkCartTest</span>
-                <span class="method-start">30014 ms</span>
+                <span class="method-start">58512 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">62242 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.OrderPlacementTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">preRequisites</span>
+                <span class="method-start">63987 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">placeOrderTest(Rahul, India, Patna, 1234567890, May, 2026)</span>
-                <span class="method-start">35462 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.AddToCartTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">35522 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.OrderPlacementTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">41850 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.ProductDetailTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">preRequisites</span>
-                <span class="method-start">44184 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">initialize</span>
-                <span class="method-start">47598 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">loginSuccessTest</span>
-                <span class="method-start">63645 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.ProductDetailTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">productdetailPageNavigationTest</span>
-                <span class="method-start">65939 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">69837 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">initialize</span>
-                <span class="method-start">70913 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.ProductDetailTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">pdp_attributeTest</span>
-                <span class="method-start">78816 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">79456 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">loginFailureTest</span>
-                <span class="method-start">83067 ms</span>
+                <span class="method-start">89395 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">85563 ms</span>
+                <span class="method-start">91169 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

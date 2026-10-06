@@ -14,17 +14,14 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import pages.HomePage;
-import pages.LoginPage;
 
 public class Base {
 	
-	protected ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	protected static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 	private Properties prop;
 	private FileInputStream fin;
 	private Logger logger = LoggerFactory.getLogger(Base.class);
 	private EdgeOptions options;
-	
 	
 	public WebDriver getDriver() {
 		return driver.get();
@@ -36,6 +33,8 @@ public class Base {
 		options.setUnhandledPromptBehaviour(
 		    UnexpectedAlertBehaviour.IGNORE
 		);
+		
+		options.addArguments("headless=new");
 		prop = new Properties();
 		try {
 			fin = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/config.properties");
